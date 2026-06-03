@@ -1,0 +1,65 @@
+@use "parts/variables";
+@use "parts/fonts";
+@use "bootstrap/scss/bootstrap" as *;
+
+body {
+	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*
+	Framen på mobil: frame2 292x189
+*/
+
+.border-louiseh-gold {
+	border-color: variables.$louiseh-gold !important;
+}
+
+.bg-louiseh-pink {
+	background-color: variables.$louiseh-pink;
+}
+
+.carousel {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+
+	.carousel-item,
+	.carousel-item img {
+		height: 100vh;
+	}
+
+	.carousel-item {
+		img {
+			object-fit: cover;
+			object-position: center center;
+			width: 100%;
+		}
+	}
+}
+
+.welcome {
+	background: linear-gradient(
+		to right,
+		variables.$louiseh-pink 0%,
+		variables.$louiseh-pink 20%,
+		transparent 100%
+	);
+	border: 5px solid variables.$louiseh-gold;
+	border-radius: 8px;
+	bottom: 0;
+	color: $white;
+	left: 0;
+	margin: 0 1rem 4.5rem 1rem;
+	padding: 1rem;
+	position: absolute;
+	right: 0;
+}
+
+@include media-breakpoint-down(sm) {
+	.welcome {
+		margin: 0 0.5rem 1rem 0.5rem;
+	}
+}

@@ -1,0 +1,14 @@
+<Solution>
+	<Folder Name="/.github/" />
+	<Folder Name="/.github/workflows/">
+		<File Path=".github/workflows/build-and-deploy.yml" />
+	</Folder>
+	<Folder Name="/.root/">
+		<File Path=".editorconfig" />
+		<File Path=".gitignore" />
+		<File Path="ReadMe.md" />
+	</Folder>
+	<Folder Name="/Source/">
+		<Project Path="Source/Site/Site.csproj" />
+	</Folder>
+</Solution>
