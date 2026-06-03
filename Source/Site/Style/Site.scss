@@ -44,6 +44,32 @@ body {
 	min-height: 100dvh !important;
 }
 
+.nav {
+	.nav-link {
+		color: $white;
+		font-size: 1.6rem;
+		padding: 8px 8px;
+
+		&:focus,
+		&:focus-visible,
+		&:hover,
+		&:link,
+		&:visited {
+			color: $white;
+		}
+
+		&:focus-visible,
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.active,
+		&:active {
+			color: $black;
+		}
+	}
+}
+
 /*.welcome {
 	background: linear-gradient(
 		to right,
