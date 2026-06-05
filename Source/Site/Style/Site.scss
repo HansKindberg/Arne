@@ -10,12 +10,104 @@ body {
 	Framen på mobil: frame2 292x189
 */
 
-.border-louiseh-gold {
-	border-color: variables.$louiseh-gold !important;
+header {
+	background-color: variables.$pink-lightest;
+	border-color: variables.$pink;
+	border-style: solid;
+	border-width: 5px 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1030;
 }
 
-.bg-louiseh-pink {
-	background-color: variables.$louiseh-pink;
+.border-gold {
+	border-color: variables.$gold !important;
+}
+
+.bg-gold {
+	background-color: variables.$gold;
+}
+
+.bg-gold-dark {
+	background-color: variables.$gold-dark;
+}
+
+.bg-gold-darker {
+	background-color: variables.$gold-darker;
+}
+
+.bg-gold-darkest {
+	background-color: variables.$gold-darkest;
+}
+
+.bg-gold-light {
+	background-color: variables.$gold-light;
+}
+
+.bg-gold-lighter {
+	background-color: variables.$gold-lighter;
+}
+
+.bg-gold-lightest {
+	background-color: variables.$gold-lightest;
+}
+
+.bg-green {
+	background-color: variables.$green;
+}
+
+.bg-green-dark {
+	background-color: variables.$green-dark;
+}
+
+.bg-green-darker {
+	background-color: variables.$green-darker;
+}
+
+.bg-green-darkest {
+	background-color: variables.$green-darkest;
+}
+
+.bg-green-light {
+	background-color: variables.$green-light;
+}
+
+.bg-green-lighter {
+	background-color: variables.$green-lighter;
+}
+
+.bg-green-lightest {
+	background-color: variables.$green-lightest;
+}
+
+.bg-pink {
+	background-color: variables.$pink;
+}
+
+.bg-pink-dark {
+	background-color: variables.$pink-dark;
+}
+
+.bg-pink-darker {
+	background-color: variables.$pink-darker;
+}
+
+.bg-pink-darkest {
+	background-color: variables.$pink-darkest;
+}
+
+.bg-pink-light {
+	background-color: variables.$pink-light;
+}
+
+.bg-pink-lighter {
+	background-color: variables.$pink-lighter;
+}
+
+.bg-pink-lightest {
+	background-color: variables.$pink-lightest;
 }
 
 .carousel {
@@ -44,9 +136,30 @@ body {
 	min-height: 100dvh !important;
 }
 
+// Class mainly for the index.html and the main element to get a large top margin.
+.mt-large {
+	margin-top: 40rem;
+}
+
+.mt-negative-main {
+	margin-top: -5rem;
+}
+
 .nav {
+	.nav-item {
+		align-items: center;
+		display: flex;
+
+		&:not(:last-child)::after {
+			color: variables.$gold-darker;
+			content: "|";
+			font-size: 2rem;
+			margin: 0 0.75rem;
+		}
+	}
+
 	.nav-link {
-		color: $white;
+		color: variables.$gold-darker;
 		font-size: 1.6rem;
 		padding: 8px 8px;
 
@@ -55,41 +168,204 @@ body {
 		&:hover,
 		&:link,
 		&:visited {
-			color: $white;
+			color: variables.$gold-darker;
 		}
 
-		&:focus-visible,
 		&:hover {
 			text-decoration: underline;
 		}
 
 		&.active,
 		&:active {
-			color: $black;
+			color: variables.$gold-darkest;
+			font-weight: bold;
+			text-decoration: underline;
 		}
 	}
 }
 
-/*.welcome {
-	background: linear-gradient(
-		to right,
-		variables.$louiseh-pink 0%,
-		variables.$louiseh-pink 20%,
-		transparent 100%
-	);
-	border: 5px solid variables.$louiseh-gold;
-	border-radius: 8px;
-	bottom: 0;
-	color: $white;
-	left: 0;
-	margin: 0 1rem 4.5rem 1rem;
-	padding: 1rem;
-	position: fixed;
-	right: 0;
+.navbar {
+	--bs-navbar-toggler-border-color: #{variables.$gold-darker};
+}
+
+.navbar-toggler {
+	background-color: $gray-100;
+	color: variables.$gold-darker;
+}
+
+.navbar-toggler-icon {
+	/* stroke='%23c9a227' below = #c9a227 = $gold. Haven't found any other way to solve it. */
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c9a227' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.text-gold {
+	color: variables.$gold;
+}
+
+.text-gold-dark {
+	color: variables.$gold-dark;
+}
+
+.text-gold-darker {
+	color: variables.$gold-darker;
+}
+
+.text-gold-darkest {
+	color: variables.$gold-darkest;
+}
+
+.text-gold-light {
+	color: variables.$gold-light;
+}
+
+.text-gold-lighter {
+	color: variables.$gold-lighter;
+}
+
+.text-gold-lightest {
+	color: variables.$gold-lightest;
+}
+
+.text-green {
+	color: variables.$green;
+}
+
+.text-green-dark {
+	color: variables.$green-dark;
+}
+
+.text-green-darker {
+	color: variables.$green-darker;
+}
+
+.text-green-darkest {
+	color: variables.$green-darkest;
+}
+
+.text-green-light {
+	color: variables.$green-light;
+}
+
+.text-green-lighter {
+	color: variables.$green-lighter;
+}
+
+.text-green-lightest {
+	color: variables.$green-lightest;
+}
+
+.text-pink {
+	color: variables.$pink;
+}
+
+.text-pink-dark {
+	color: variables.$pink-dark;
+}
+
+.text-pink-darker {
+	color: variables.$pink-darker;
+}
+
+.text-pink-darkest {
+	color: variables.$pink-darkest;
+}
+
+.text-pink-light {
+	color: variables.$pink-light;
+}
+
+.text-pink-lighter {
+	color: variables.$pink-lighter;
+}
+
+.text-pink-lightest {
+	color: variables.$pink-lightest;
 }
 
 @include media-breakpoint-down(sm) {
-	.welcome {
-		margin: 0 0.5rem 1rem 0.5rem;
+	.mt-large {
+		margin-top: 20rem;
 	}
-}*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include media-breakpoint-between(sm, md) {
+	body {
+		color: red;
+	}
+}
+
+@include media-breakpoint-between(md, lg) {
+	body {
+		color: green;
+	}
+}
+
+@include media-breakpoint-between(lg, xl) {
+	body {
+		color: yellow;
+	}
+}
+
+@include media-breakpoint-between(xl, xxl) {
+	body {
+		color: red;
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	body {
+		color: pink;
+	}
+}

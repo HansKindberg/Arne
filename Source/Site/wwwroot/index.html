@@ -7,40 +7,39 @@
 		<link href="style/site.css" rel="stylesheet" />
 	</head>
 	<body>
-		<header class="bg-louiseh-pink border-bottom border-5 border-louiseh-gold fixed-top">
+		<header>
 			<nav class="navbar navbar-expand-md">
 				<div class="container-md">
-					<a href="index.html">
-						<img alt="Logotyp" height="64" src="style/images/logo.png" />
+					<a class="me-3" href="index.html" title="Hem">
+						<svg class="text-gold-darker" height="3.4rem" role="presentation" width="10rem" title="Logotyp">
+							<use xlink:href="style/sprites/sprite.svg#logo" />
+						</svg>
 					</a>
-					<button aria-controls="navigation" aria-expanded="false" aria-label="Toggle main navigation" class="navbar-toggler bg-light mt-2" data-bs-target="#navigation" data-bs-toggle="collapse" type="button">
+					<button aria-controls="navigation" aria-expanded="false" aria-label="Växla navigering" class="navbar-toggler" data-bs-target="#navigation" data-bs-toggle="collapse" type="button">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navigation">
 						<ul class="nav">
 							<li class="nav-item">
-								<a class="nav-link active" href="#">Hem</a>
+								<a class="nav-link active" href="#" title="Min dröm">Om mig</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Min dröm</a>
+								<a class="nav-link" href="#" title="Händer hos oss">Aktuellt</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Händer hos oss</a>
+								<a class="nav-link" href="#" title="Salongen">Salongen</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Salongen</a>
+								<a class="nav-link" href="#" title="Bokning">Boka</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Bokning</a>
+								<a class="nav-link" href="#" title="Produkter">Produkter</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Produkter</a>
+								<a class="nav-link" href="#" title="Det här är vi också bra på">Tjänster</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Det här är vi också bra på</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Här hittar du oss</a>
+								<a class="nav-link" href="#" title="Här hittar du oss">Kontakt</a>
 							</li>
 						</ul>
 					</div>
@@ -72,8 +71,16 @@
 				</div>
 			</div>
 		</section>
-		<main class="container-md d-flex flex-column min-dvh-100" role="main">
-			<div class="bg-light border border-5 border-louiseh-gold mb-3 mt-auto p-3 rounded-4">
+		<main class="container-md mb-3 mt-large" role="main">
+			<div class="d-flex justify-content-center">
+				<div class="position-relative">
+					<img alt="Ram" class="img-fluid" src="style/images/frame.png">
+					<div class="position-absolute start-50 text-center top-50 translate-middle">
+						<p class="mb-0 fs-2 text-white">Too Much of a Good Thing is Wonderful</p>
+					</div>
+				</div>
+			</div>
+			<div class="bg-light border border-5 border-gold mt-negative-main p-3 rounded-4">
 				<h1>Välkommen hem till oss!</h1>
 				<p class="fs-4">Att stiga över tröskeln in till oss på Louise H ska vara som att komma till en annan värld för en liten stund. Att stänga ute vardagsbruset och bara tänka på dig själv. Vi har en passion och kärlek för allt som är vackert, för möten med människor, för att njuta till vardags och till fest. Vi vill att du ska gå härifrån och känna dig snygg och med en känsla av att ha blivit inspirerad och väl omhändertagen.</p>
 			</div>

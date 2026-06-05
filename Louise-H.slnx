@@ -1,4 +1,10 @@
 <Solution>
+	<Folder Name="/.backup/">
+		<File Path=".backup/louiseh logo svart.png" />
+	</Folder>
+	<Folder Name="/.backup/Originals/">
+		<File Path=".backup/Originals/louiseh logo vit.png" />
+	</Folder>
 	<Folder Name="/.github/" />
 	<Folder Name="/.github/workflows/">
 		<File Path=".github/workflows/build-and-deploy.yml" />

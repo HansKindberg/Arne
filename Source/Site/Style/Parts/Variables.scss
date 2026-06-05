@@ -1,6 +1,29 @@
+// Colors
 $black: #212121;
-$louiseh-pink: #ff00c5;
-$louiseh-gold: #c9a227;
+
+$pink: #ff00c5;
+$pink-light: mix(white, $pink, 30%);
+$pink-lighter: mix(white, $pink, 60%);
+$pink-lightest: mix(white, $pink, 90%);
+$pink-dark: mix(black, $pink, 20%);
+$pink-darker: mix(black, $pink, 40%);
+$pink-darkest: mix(black, $pink, 60%);
+
+$gold: #c9a227;
+$gold-light: mix(white, $gold, 30%);
+$gold-lighter: mix(white, $gold, 60%);
+$gold-lightest: mix(white, $gold, 90%);
+$gold-dark: mix(black, $gold, 20%);
+$gold-darker: mix(black, $gold, 40%);
+$gold-darkest: mix(black, $gold, 60%);
+
+$green: #0096A9;
+$green-light: mix(white, $green, 30%);
+$green-lighter: mix(white, $green, 60%);
+$green-lightest: mix(white, $green, 90%);
+$green-dark: mix(black, $green, 20%);
+$green-darker: mix(black, $green, 40%);
+$green-darkest: mix(black, $green, 60%);
 
 /*
 	Ljusguld: #FFD700
