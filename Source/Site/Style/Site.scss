@@ -4,11 +4,35 @@
 
 body {
 	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
 
-/*
-	Framen på mobil: frame2 292x189
-*/
+	&.home {
+		main {
+			margin-bottom: 1rem;
+			margin-top: 30rem;
+
+			.frame {
+				p {
+					color: $white;
+					font-size: 1.8rem;
+					margin-bottom: 0;
+				}
+			}
+
+			.welcome {
+				background-color: rgba(var(--bs-light-rgb));
+				border: 5px solid variables.$gold;
+				border-radius: var(--bs-border-radius-xl) !important;
+				margin-top: -5rem;
+				padding: 1rem;
+				padding-top: 4rem;
+
+				p {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
 
 header {
 	background-color: variables.$pink-lightest;
@@ -20,10 +44,6 @@ header {
 	right: 0;
 	top: 0;
 	z-index: 1030;
-}
-
-.border-gold {
-	border-color: variables.$gold !important;
 }
 
 .bg-gold {
@@ -129,20 +149,13 @@ header {
 			object-position: center center;
 			width: 100%;
 		}
+
+/*		&.lamp {
+			img {
+				object-position: center top;
+			}
+		}*/
 	}
-}
-
-.min-dvh-100 {
-	min-height: 100dvh !important;
-}
-
-// Class mainly for the index.html and the main element to get a large top margin.
-.mt-large {
-	margin-top: 40rem;
-}
-
-.mt-negative-main {
-	margin-top: -5rem;
 }
 
 .nav {
@@ -283,89 +296,25 @@ header {
 }
 
 @include media-breakpoint-down(sm) {
-	.mt-large {
-		margin-top: 20rem;
-	}
+
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @include media-breakpoint-between(sm, md) {
-	body {
-		color: red;
-	}
+
 }
 
 @include media-breakpoint-between(md, lg) {
-	body {
-		color: green;
-	}
+
 }
 
 @include media-breakpoint-between(lg, xl) {
-	body {
-		color: yellow;
-	}
+
 }
 
 @include media-breakpoint-between(xl, xxl) {
-	body {
-		color: red;
-	}
+
 }
 
 @include media-breakpoint-up(xxl) {
-	body {
-		color: pink;
-	}
+
 }
