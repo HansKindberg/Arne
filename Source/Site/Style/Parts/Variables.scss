@@ -1,33 +1,26 @@
 // Colors
 $black: #212121;
 
-$pink: #ff00c5;
-$pink-light: mix(white, $pink, 30%);
-$pink-lighter: mix(white, $pink, 60%);
-$pink-lightest: mix(white, $pink, 90%);
-$pink-dark: mix(black, $pink, 20%);
-$pink-darker: mix(black, $pink, 40%);
-$pink-darkest: mix(black, $pink, 60%);
+$primary: #d73776; // Pink (another pink #ff00c5)
+$primary-light: mix(white, $primary, 30%);
+$primary-lighter: mix(white, $primary, 60%);
+$primary-lightest: mix(white, $primary, 90%);
+$primary-dark: mix(black, $primary, 20%);
+$primary-darker: mix(black, $primary, 40%);
+$primary-darkest: mix(black, $primary, 60%);
 
-$gold: #c9a227;
-$gold-light: mix(white, $gold, 30%);
-$gold-lighter: mix(white, $gold, 60%);
-$gold-lightest: mix(white, $gold, 90%);
-$gold-dark: mix(black, $gold, 20%);
-$gold-darker: mix(black, $gold, 40%);
-$gold-darkest: mix(black, $gold, 60%);
+$secondary: #28c889; // Green (another green #0096a9)
+$secondary-light: mix(white, $secondary, 30%);
+$secondary-lighter: mix(white, $secondary, 60%);
+$secondary-lightest: mix(white, $secondary, 90%);
+$secondary-dark: mix(black, $secondary, 20%);
+$secondary-darker: mix(black, $secondary, 40%);
+$secondary-darkest: mix(black, $secondary, 60%);
 
-$green: #0096A9;
-$green-light: mix(white, $green, 30%);
-$green-lighter: mix(white, $green, 60%);
-$green-lightest: mix(white, $green, 90%);
-$green-dark: mix(black, $green, 20%);
-$green-darker: mix(black, $green, 40%);
-$green-darkest: mix(black, $green, 60%);
-
-/*
-	Ljusguld: #FFD700
-	Mässingsguld: #B5A642
-	Mörkguld: #C9A227
-	Roséguld: #B76E79
-*/
+$tertiary: #c9a227; // Gold - from chatgpt: light gold = #ffd700, brass gold = #b5a642, dark gold = #c9a227, rosé gold = #b76e79
+$tertiary-light: mix(white, $tertiary, 30%);
+$tertiary-lighter: mix(white, $tertiary, 60%);
+$tertiary-lightest: mix(white, $tertiary, 90%);
+$tertiary-dark: mix(black, $tertiary, 20%);
+$tertiary-darker: mix(black, $tertiary, 40%);
+$tertiary-darkest: mix(black, $tertiary, 60%);

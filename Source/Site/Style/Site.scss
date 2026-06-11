@@ -20,7 +20,7 @@ body {
 
 			.welcome {
 				background-color: rgba(var(--bs-light-rgb));
-				border: 5px solid variables.$gold;
+				border: 10px solid variables.$secondary;
 				border-radius: var(--bs-border-radius-xl) !important;
 				margin-top: -5rem;
 				padding: 1rem;
@@ -35,10 +35,10 @@ body {
 }
 
 header {
-	background-color: variables.$pink-lightest;
-	border-color: variables.$pink;
+	background-color: variables.$primary-lightest;
+	border-color: variables.$primary;
 	border-style: solid;
-	border-width: 5px 0;
+	border-width: 10px 0;
 	left: 0;
 	position: fixed;
 	right: 0;
@@ -46,88 +46,88 @@ header {
 	z-index: 1030;
 }
 
-.bg-gold {
-	background-color: variables.$gold;
+.bg-primary {
+	background-color: variables.$primary;
 }
 
-.bg-gold-dark {
-	background-color: variables.$gold-dark;
+.bg-primary-dark {
+	background-color: variables.$primary-dark;
 }
 
-.bg-gold-darker {
-	background-color: variables.$gold-darker;
+.bg-primary-darker {
+	background-color: variables.$primary-darker;
 }
 
-.bg-gold-darkest {
-	background-color: variables.$gold-darkest;
+.bg-primary-darkest {
+	background-color: variables.$primary-darkest;
 }
 
-.bg-gold-light {
-	background-color: variables.$gold-light;
+.bg-primary-light {
+	background-color: variables.$primary-light;
 }
 
-.bg-gold-lighter {
-	background-color: variables.$gold-lighter;
+.bg-primary-lighter {
+	background-color: variables.$primary-lighter;
 }
 
-.bg-gold-lightest {
-	background-color: variables.$gold-lightest;
+.bg-primary-lightest {
+	background-color: variables.$primary-lightest;
 }
 
-.bg-green {
-	background-color: variables.$green;
+.bg-secondary {
+	background-color: variables.$secondary;
 }
 
-.bg-green-dark {
-	background-color: variables.$green-dark;
+.bg-secondary-dark {
+	background-color: variables.$secondary-dark;
 }
 
-.bg-green-darker {
-	background-color: variables.$green-darker;
+.bg-secondary-darker {
+	background-color: variables.$secondary-darker;
 }
 
-.bg-green-darkest {
-	background-color: variables.$green-darkest;
+.bg-secondary-darkest {
+	background-color: variables.$secondary-darkest;
 }
 
-.bg-green-light {
-	background-color: variables.$green-light;
+.bg-secondary-light {
+	background-color: variables.$secondary-light;
 }
 
-.bg-green-lighter {
-	background-color: variables.$green-lighter;
+.bg-secondary-lighter {
+	background-color: variables.$secondary-lighter;
 }
 
-.bg-green-lightest {
-	background-color: variables.$green-lightest;
+.bg-secondary-lightest {
+	background-color: variables.$secondary-lightest;
 }
 
-.bg-pink {
-	background-color: variables.$pink;
+.bg-tertiary {
+	background-color: variables.$tertiary;
 }
 
-.bg-pink-dark {
-	background-color: variables.$pink-dark;
+.bg-tertiary-dark {
+	background-color: variables.$tertiary-dark;
 }
 
-.bg-pink-darker {
-	background-color: variables.$pink-darker;
+.bg-tertiary-darker {
+	background-color: variables.$tertiary-darker;
 }
 
-.bg-pink-darkest {
-	background-color: variables.$pink-darkest;
+.bg-tertiary-darkest {
+	background-color: variables.$tertiary-darkest;
 }
 
-.bg-pink-light {
-	background-color: variables.$pink-light;
+.bg-tertiary-light {
+	background-color: variables.$tertiary-light;
 }
 
-.bg-pink-lighter {
-	background-color: variables.$pink-lighter;
+.bg-tertiary-lighter {
+	background-color: variables.$tertiary-lighter;
 }
 
-.bg-pink-lightest {
-	background-color: variables.$pink-lightest;
+.bg-tertiary-lightest {
+	background-color: variables.$tertiary-lightest;
 }
 
 .carousel {
@@ -164,7 +164,7 @@ header {
 		display: flex;
 
 		&:not(:last-child)::after {
-			color: variables.$gold-darker;
+			color: variables.$secondary-darker;
 			content: "|";
 			font-size: 2rem;
 			margin: 0 0.75rem;
@@ -172,7 +172,7 @@ header {
 	}
 
 	.nav-link {
-		color: variables.$gold-darker;
+		color: variables.$secondary-darker;
 		font-size: 1.6rem;
 		padding: 8px 8px;
 
@@ -181,7 +181,7 @@ header {
 		&:hover,
 		&:link,
 		&:visited {
-			color: variables.$gold-darker;
+			color: variables.$secondary-darker;
 		}
 
 		&:hover {
@@ -190,7 +190,7 @@ header {
 
 		&.active,
 		&:active {
-			color: variables.$gold-darkest;
+			color: variables.$secondary-darkest;
 			font-weight: bold;
 			text-decoration: underline;
 		}
@@ -198,101 +198,100 @@ header {
 }
 
 .navbar {
-	--bs-navbar-toggler-border-color: #{variables.$gold-darker};
+	--bs-navbar-toggler-border-color: #{variables.$secondary-darker};
 }
 
 .navbar-toggler {
 	background-color: $gray-100;
-	color: variables.$gold-darker;
+	color: variables.$secondary-darker;
 }
 
 .navbar-toggler-icon {
-	/* stroke='%23c9a227' below = #c9a227 = $gold. Haven't found any other way to solve it. */
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c9a227' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23#{str-slice('#{variables.$secondary}', 2)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-.text-gold {
-	color: variables.$gold;
+.text-primary {
+	color: variables.$primary;
 }
 
-.text-gold-dark {
-	color: variables.$gold-dark;
+.text-primary-dark {
+	color: variables.$primary-dark;
 }
 
-.text-gold-darker {
-	color: variables.$gold-darker;
+.text-primary-darker {
+	color: variables.$primary-darker;
 }
 
-.text-gold-darkest {
-	color: variables.$gold-darkest;
+.text-primary-darkest {
+	color: variables.$primary-darkest;
 }
 
-.text-gold-light {
-	color: variables.$gold-light;
+.text-primary-light {
+	color: variables.$primary-light;
 }
 
-.text-gold-lighter {
-	color: variables.$gold-lighter;
+.text-primary-lighter {
+	color: variables.$primary-lighter;
 }
 
-.text-gold-lightest {
-	color: variables.$gold-lightest;
+.text-primary-lightest {
+	color: variables.$primary-lightest;
 }
 
-.text-green {
-	color: variables.$green;
+.text-secondary {
+	color: variables.$secondary;
 }
 
-.text-green-dark {
-	color: variables.$green-dark;
+.text-secondary-dark {
+	color: variables.$secondary-dark;
 }
 
-.text-green-darker {
-	color: variables.$green-darker;
+.text-secondary-darker {
+	color: variables.$secondary-darker;
 }
 
-.text-green-darkest {
-	color: variables.$green-darkest;
+.text-secondary-darkest {
+	color: variables.$secondary-darkest;
 }
 
-.text-green-light {
-	color: variables.$green-light;
+.text-secondary-light {
+	color: variables.$secondary-light;
 }
 
-.text-green-lighter {
-	color: variables.$green-lighter;
+.text-secondary-lighter {
+	color: variables.$secondary-lighter;
 }
 
-.text-green-lightest {
-	color: variables.$green-lightest;
+.text-secondary-lightest {
+	color: variables.$secondary-lightest;
 }
 
-.text-pink {
-	color: variables.$pink;
+.text-tertiary {
+	color: variables.$tertiary;
 }
 
-.text-pink-dark {
-	color: variables.$pink-dark;
+.text-tertiary-dark {
+	color: variables.$tertiary-dark;
 }
 
-.text-pink-darker {
-	color: variables.$pink-darker;
+.text-tertiary-darker {
+	color: variables.$tertiary-darker;
 }
 
-.text-pink-darkest {
-	color: variables.$pink-darkest;
+.text-tertiary-darkest {
+	color: variables.$tertiary-darkest;
 }
 
-.text-pink-light {
-	color: variables.$pink-light;
+.text-tertiary-light {
+	color: variables.$tertiary-light;
 }
 
-.text-pink-lighter {
-	color: variables.$pink-lighter;
+.text-tertiary-lighter {
+	color: variables.$tertiary-lighter;
 }
 
-.text-pink-lightest {
-	color: variables.$pink-lightest;
+.text-tertiary-lightest {
+	color: variables.$tertiary-lightest;
 }
 
 @include media-breakpoint-down(sm) {
