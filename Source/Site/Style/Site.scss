@@ -14,7 +14,7 @@ body {
 	&.home {
 		main {
 			margin-bottom: 1rem;
-			margin-top: 30rem;
+			margin-top: 50rem;
 
 			> h1 {
 				background-color: variables.$secondary;
@@ -35,6 +35,11 @@ body {
 					color: variables.$secondary-darkest;
 					font-size: 1.6rem;
 					margin-bottom: 0;
+				}
+
+				svg {
+					height: 15rem;
+					width: 26rem;
 				}
 			}
 
@@ -59,7 +64,7 @@ header {
 	border-color: variables.$primary;
 	border-style: solid;
 	border-width: 10px 0;
-	height: var(--header-height);
+	//////////////////////////////////////////////height: var(--header-height);
 	left: 0;
 	position: fixed;
 	right: 0;
@@ -315,7 +320,35 @@ header {
 }
 
 @include media-breakpoint-down(sm) {
+	body {
+		&.home {
+			main {
+				/////////////////////////////margin-bottom: 1rem;
+				margin-top: 36rem;
 
+				.frame {
+					p {
+						font-size: 1.1rem;
+					}
+
+					svg {
+						height: 10rem;
+						width: 17.3rem;
+					}
+				}
+
+				.welcome {
+					p {
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+
+	.carousel {
+		top: 0;
+	}
 }
 
 @include media-breakpoint-between(sm, md) {
