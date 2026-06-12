@@ -8,6 +8,7 @@
 }
 
 body {
+	color: variables.$black;
 	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
 	margin-top: var(--header-height);
 
@@ -31,15 +32,17 @@ body {
 			}
 
 			.frame {
-				--frame-background: #{variables.$primary-lightest};
+				--frame-background: #{variables.$secondary-lightest};
+				--frame-border: #{variables.$primary};
 
 				p {
-					color: variables.$secondary-darkest;
+					//color: variables.$secondary-darkest;
 					font-size: 1.6rem;
 					margin-bottom: 0;
 				}
 
 				svg {
+					color: variables.$secondary;
 					height: 15rem;
 					width: 26rem;
 				}
