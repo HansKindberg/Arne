@@ -18,13 +18,15 @@ body {
 
 			> h1 {
 				background-color: variables.$secondary;
+				color: variables.$white;
 				font-size: var(--heading-font-size);
 				left: 0;
-				padding-top: 0.4rem;
+				padding-top: 0.6rem;
 				position: fixed;
 				right: 0;
 				text-align: center;
 				top: var(--header-height);
+				top: calc(var(--header-height) - 0.2rem);
 				z-index: 1020;
 			}
 
@@ -64,7 +66,6 @@ header {
 	border-color: variables.$primary;
 	border-style: solid;
 	border-width: 10px 0;
-	//////////////////////////////////////////////height: var(--header-height);
 	left: 0;
 	position: fixed;
 	right: 0;
@@ -175,11 +176,6 @@ header {
 			object-position: center center;
 			width: 100%;
 		}
-		/*		&.lamp {
-			img {
-				object-position: center top;
-			}
-		}*/
 	}
 }
 
@@ -323,25 +319,24 @@ header {
 	body {
 		&.home {
 			main {
-				/////////////////////////////margin-bottom: 1rem;
 				margin-top: 36rem;
 
 				.frame {
 					p {
-						font-size: 1.1rem;
+						font-size: 1.3rem;
 					}
 
 					svg {
-						height: 10rem;
-						width: 17.3rem;
+						height: 12rem;
+						width: 20.75rem;
 					}
 				}
 
-				.welcome {
+/*				.welcome {
 					p {
 						font-size: 1.2rem;
 					}
-				}
+				}*/
 			}
 		}
 	}
