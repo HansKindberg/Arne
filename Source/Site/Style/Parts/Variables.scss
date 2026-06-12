@@ -1,7 +1,16 @@
 // Colors
 $black: #212121;
+$white: #fafafa;
 
-$primary: #d73776; // Pink (another pink #ff00c5)
+/*
+	Pink
+	- color from the previous web: #ff00c5 / rgb(255, 0, 197) / complementary colors https://qconv.com/en/colors/rgb-255_0_197
+	- colors from the salon (https://qconv.com/en/convert-ncs-to-rgb)
+		- S0540-R20B (wall): #faaac3
+		- S0520-R20B (windows): #fad5df
+		- S1070-R20B: #d73776
+*/
+$primary: #ff00c5;
 $primary-light: mix(white, $primary, 30%);
 $primary-lighter: mix(white, $primary, 60%);
 $primary-lightest: mix(white, $primary, 90%);
@@ -9,7 +18,12 @@ $primary-dark: mix(black, $primary, 20%);
 $primary-darker: mix(black, $primary, 40%);
 $primary-darkest: mix(black, $primary, 60%);
 
-$secondary: #28c889; // Green (another green #0096a9)
+/*
+	Green
+	- color from the previous web: #0096a9
+	- matching green with the pink colors from the salon: #28c889	
+*/
+$secondary: #0096a9;
 $secondary-light: mix(white, $secondary, 30%);
 $secondary-lighter: mix(white, $secondary, 60%);
 $secondary-lightest: mix(white, $secondary, 90%);
@@ -17,6 +31,15 @@ $secondary-dark: mix(black, $secondary, 20%);
 $secondary-darker: mix(black, $secondary, 40%);
 $secondary-darkest: mix(black, $secondary, 60%);
 
+/*
+	Gold
+	- color "gold" in css/html: #ffd700
+	- colors from chatgpt
+		- light gold: #ffd700
+		- brass gold: #b5a642
+		- dark gold: #c9a227
+		- rosé gold: #b76e79
+*/
 $tertiary: #c9a227; // Gold - from chatgpt: light gold = #ffd700, brass gold = #b5a642, dark gold = #c9a227, rosé gold = #b76e79
 $tertiary-light: mix(white, $tertiary, 30%);
 $tertiary-lighter: mix(white, $tertiary, 60%);

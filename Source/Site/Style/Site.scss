@@ -2,27 +2,47 @@
 @use "Parts/Fonts";
 @use "bootstrap/scss/bootstrap" as *;
 
+:root {
+	--header-height: 5.25rem;
+	--heading-font-size: 1.8rem;
+}
+
 body {
 	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	margin-top: var(--header-height);
 
 	&.home {
 		main {
 			margin-bottom: 1rem;
 			margin-top: 30rem;
 
+			> h1 {
+				background-color: variables.$secondary;
+				font-size: var(--heading-font-size);
+				left: 0;
+				padding-top: 0.4rem;
+				position: fixed;
+				right: 0;
+				text-align: center;
+				top: var(--header-height);
+				z-index: 1020;
+			}
+
 			.frame {
+				--frame-background: #{variables.$primary-lightest};
+
 				p {
-					color: $white;
-					font-size: 1.8rem;
+					color: variables.$secondary-darkest;
+					font-size: 1.6rem;
 					margin-bottom: 0;
 				}
 			}
 
 			.welcome {
-				background-color: rgba(var(--bs-light-rgb));
-				border: 10px solid variables.$secondary;
+				background-color: variables.$white;
+				border: 10px solid variables.$primary;
 				border-radius: var(--bs-border-radius-xl) !important;
-				margin-top: -5rem;
+				margin-top: -4rem;
 				padding: 1rem;
 				padding-top: 4rem;
 
@@ -35,10 +55,11 @@ body {
 }
 
 header {
-	background-color: variables.$primary-lightest;
+	background-color: variables.$secondary-lightest;
 	border-color: variables.$primary;
 	border-style: solid;
 	border-width: 10px 0;
+	height: var(--header-height);
 	left: 0;
 	position: fixed;
 	right: 0;
@@ -47,94 +68,94 @@ header {
 }
 
 .bg-primary {
-	background-color: variables.$primary;
+	background-color: variables.$primary !important;
 }
 
 .bg-primary-dark {
-	background-color: variables.$primary-dark;
+	background-color: variables.$primary-dark !important;
 }
 
 .bg-primary-darker {
-	background-color: variables.$primary-darker;
+	background-color: variables.$primary-darker !important;
 }
 
 .bg-primary-darkest {
-	background-color: variables.$primary-darkest;
+	background-color: variables.$primary-darkest !important;
 }
 
 .bg-primary-light {
-	background-color: variables.$primary-light;
+	background-color: variables.$primary-light !important;
 }
 
 .bg-primary-lighter {
-	background-color: variables.$primary-lighter;
+	background-color: variables.$primary-lighter !important;
 }
 
 .bg-primary-lightest {
-	background-color: variables.$primary-lightest;
+	background-color: variables.$primary-lightest !important;
 }
 
 .bg-secondary {
-	background-color: variables.$secondary;
+	background-color: variables.$secondary !important;
 }
 
 .bg-secondary-dark {
-	background-color: variables.$secondary-dark;
+	background-color: variables.$secondary-dark !important;
 }
 
 .bg-secondary-darker {
-	background-color: variables.$secondary-darker;
+	background-color: variables.$secondary-darker !important;
 }
 
 .bg-secondary-darkest {
-	background-color: variables.$secondary-darkest;
+	background-color: variables.$secondary-darkest !important;
 }
 
 .bg-secondary-light {
-	background-color: variables.$secondary-light;
+	background-color: variables.$secondary-light !important;
 }
 
 .bg-secondary-lighter {
-	background-color: variables.$secondary-lighter;
+	background-color: variables.$secondary-lighter !important;
 }
 
 .bg-secondary-lightest {
-	background-color: variables.$secondary-lightest;
+	background-color: variables.$secondary-lightest !important;
 }
 
 .bg-tertiary {
-	background-color: variables.$tertiary;
+	background-color: variables.$tertiary !important;
 }
 
 .bg-tertiary-dark {
-	background-color: variables.$tertiary-dark;
+	background-color: variables.$tertiary-dark !important;
 }
 
 .bg-tertiary-darker {
-	background-color: variables.$tertiary-darker;
+	background-color: variables.$tertiary-darker !important;
 }
 
 .bg-tertiary-darkest {
-	background-color: variables.$tertiary-darkest;
+	background-color: variables.$tertiary-darkest !important;
 }
 
 .bg-tertiary-light {
-	background-color: variables.$tertiary-light;
+	background-color: variables.$tertiary-light !important;
 }
 
 .bg-tertiary-lighter {
-	background-color: variables.$tertiary-lighter;
+	background-color: variables.$tertiary-lighter !important;
 }
 
 .bg-tertiary-lightest {
-	background-color: variables.$tertiary-lightest;
+	background-color: variables.$tertiary-lightest !important;
 }
 
 .carousel {
 	height: 100%;
 	left: 0;
 	position: fixed;
-	top: 0;
+	top: calc(var(--header-height) + var(--heading-font-size));
 	width: 100%;
 	z-index: -1;
 
@@ -149,8 +170,7 @@ header {
 			object-position: center center;
 			width: 100%;
 		}
-
-/*		&.lamp {
+		/*		&.lamp {
 			img {
 				object-position: center top;
 			}
@@ -174,7 +194,7 @@ header {
 	.nav-link {
 		color: variables.$secondary-darker;
 		font-size: 1.6rem;
-		padding: 8px 8px;
+		padding: 0;
 
 		&:focus,
 		&:focus-visible,
@@ -211,87 +231,87 @@ header {
 }
 
 .text-primary {
-	color: variables.$primary;
+	color: variables.$primary !important;
 }
 
 .text-primary-dark {
-	color: variables.$primary-dark;
+	color: variables.$primary-dark !important;
 }
 
 .text-primary-darker {
-	color: variables.$primary-darker;
+	color: variables.$primary-darker !important;
 }
 
 .text-primary-darkest {
-	color: variables.$primary-darkest;
+	color: variables.$primary-darkest !important;
 }
 
 .text-primary-light {
-	color: variables.$primary-light;
+	color: variables.$primary-light !important;
 }
 
 .text-primary-lighter {
-	color: variables.$primary-lighter;
+	color: variables.$primary-lighter !important;
 }
 
 .text-primary-lightest {
-	color: variables.$primary-lightest;
+	color: variables.$primary-lightest !important;
 }
 
 .text-secondary {
-	color: variables.$secondary;
+	color: variables.$secondary !important;
 }
 
 .text-secondary-dark {
-	color: variables.$secondary-dark;
+	color: variables.$secondary-dark !important;
 }
 
 .text-secondary-darker {
-	color: variables.$secondary-darker;
+	color: variables.$secondary-darker !important;
 }
 
 .text-secondary-darkest {
-	color: variables.$secondary-darkest;
+	color: variables.$secondary-darkest !important;
 }
 
 .text-secondary-light {
-	color: variables.$secondary-light;
+	color: variables.$secondary-light !important;
 }
 
 .text-secondary-lighter {
-	color: variables.$secondary-lighter;
+	color: variables.$secondary-lighter !important;
 }
 
 .text-secondary-lightest {
-	color: variables.$secondary-lightest;
+	color: variables.$secondary-lightest !important;
 }
 
 .text-tertiary {
-	color: variables.$tertiary;
+	color: variables.$tertiary !important;
 }
 
 .text-tertiary-dark {
-	color: variables.$tertiary-dark;
+	color: variables.$tertiary-dark !important;
 }
 
 .text-tertiary-darker {
-	color: variables.$tertiary-darker;
+	color: variables.$tertiary-darker !important;
 }
 
 .text-tertiary-darkest {
-	color: variables.$tertiary-darkest;
+	color: variables.$tertiary-darkest !important;
 }
 
 .text-tertiary-light {
-	color: variables.$tertiary-light;
+	color: variables.$tertiary-light !important;
 }
 
 .text-tertiary-lighter {
-	color: variables.$tertiary-lighter;
+	color: variables.$tertiary-lighter !important;
 }
 
 .text-tertiary-lightest {
-	color: variables.$tertiary-lightest;
+	color: variables.$tertiary-lightest !important;
 }
 
 @include media-breakpoint-down(sm) {

@@ -6,9 +6,13 @@
 
 The following NCS colors are used in the salon:
 
-- Wall S0540-R20B
-- Window S0520-R20B
+- wall: S0540-R20B
+- windows: S0520-R20B
 - S1070-R20B
+
+Complementary green to S1070-R20B according to https://qconv.com/en/colors/rgb-215_55_118:
+
+- #28c889
 
 Convert them to webb-colors:
 
@@ -17,14 +21,6 @@ Convert them to webb-colors:
 #### NCS
 
 - [Learn the NCS System](https://ncscolour.com/pages/the-system)
-
-We have taken S1070-R20B as the primary color:
-
-- #d73776
-
-Complementary color (green):
-
-- #28c889
 
 ## Inkscape
 
