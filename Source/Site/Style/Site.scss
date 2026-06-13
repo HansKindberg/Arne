@@ -2,14 +2,13 @@
 @use "Parts/Fonts";
 @use "bootstrap/scss/bootstrap" as *;
 
-/*:root {
-	--header-height: 5.25rem;
-}*/
+:root {
+	--header-height: 5rem;
+}
 
 body {
 	color: variables.$black;
 	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
-	//////////////////////////////////////margin-top: var(--header-height);
 
 	&.home {
 		main {
@@ -144,7 +143,7 @@ header {
 	left: 0;
 	position: fixed;
 	top: 0;
-	/////////////////////////////////////top: var(--header-height);
+	top: var(--header-height) !important;
 	width: 100%;
 	z-index: -1;
 
@@ -156,8 +155,24 @@ header {
 	.carousel-item {
 		img {
 			object-fit: cover;
-			object-position: center center;
+			object-position: center top;
 			width: 100%;
+
+/*			&.jimmy {
+				object-position: 60% center;
+			}
+
+			&.marlene {
+				object-position: 60% center;
+			}
+
+			&.micaela {
+				object-position: 55% center;
+			}
+
+			&.louise {
+				object-position: left center;
+			}*/
 		}
 	}
 }
@@ -386,7 +401,26 @@ header {
 	}
 
 	.carousel {
-		top: 0;
+		.carousel-item {
+			img {
+				&.jimmy {
+					object-position: 60% center;
+				}
+
+				&.marlene {
+					object-position: 60% center;
+				}
+
+				&.micaela {
+					object-position: 55% center;
+				}
+
+				&.louise {
+					object-position: left center;
+					transform: translateY(-15%);
+				}
+			}
+		}
 	}
 }
 
