@@ -155,24 +155,8 @@ header {
 	.carousel-item {
 		img {
 			object-fit: cover;
-			object-position: center top;
+			object-position: center center;
 			width: 100%;
-
-/*			&.jimmy {
-				object-position: 60% center;
-			}
-
-			&.marlene {
-				object-position: 60% center;
-			}
-
-			&.micaela {
-				object-position: 55% center;
-			}
-
-			&.louise {
-				object-position: left center;
-			}*/
 		}
 	}
 }
@@ -389,11 +373,11 @@ header {
 	body {
 		&.home {
 			main {
-				margin-top: 36rem;
+				margin-top: 34rem;
 
 				.frame {
 					p {
-						font-size: 1.6rem;
+						font-size: 1.5rem;
 					}
 				}
 			}
@@ -403,8 +387,24 @@ header {
 	.carousel {
 		.carousel-item {
 			img {
+				&.cornelia {}
+
+				&.cup {
+					object-position: 55% center;
+					transform: translateY(-15%);
+				}
+
 				&.jimmy {
 					object-position: 60% center;
+				}
+
+				&.lamp {
+					object-position: 55% center;
+				}
+
+				&.louise {
+					object-position: left center;
+					transform: translateY(-15%);
 				}
 
 				&.marlene {
@@ -413,8 +413,23 @@ header {
 
 				&.micaela {
 					object-position: 55% center;
+					transform: translateY(-5%);
 				}
+			}
+		}
+	}
+}
 
+@include media-breakpoint-between(sm, md) {
+	.carousel {
+		.carousel-item {
+			img {
+				&.lamp {
+					object-position: 55% 5%;
+				}
+			}
+
+			img {
 				&.louise {
 					object-position: left center;
 					transform: translateY(-15%);
@@ -424,22 +439,82 @@ header {
 	}
 }
 
-@include media-breakpoint-between(sm, md) {
-
-}
-
 @include media-breakpoint-between(md, lg) {
-
+	.carousel {
+		.carousel-item {
+			img {
+				&.lamp {
+					object-position: 55% 15%;
+				}
+			}
+		}
+	}
 }
 
 @include media-breakpoint-between(lg, xl) {
-
+	.carousel {
+		.carousel-item {
+			img {
+				&.lamp {
+					object-position: 55% 25%;
+				}
+			}
+		}
+	}
 }
 
 @include media-breakpoint-between(xl, xxl) {
+	.carousel {
+		.carousel-item {
+			img {
+				&.cup {
+					object-position: 55% 5%;
+				}
 
+				&.lamp {
+					object-position: 55% 15%;
+				}
+
+				&.louise {
+					object-position: left 35%;
+				}
+			}
+		}
+	}
 }
 
 @include media-breakpoint-up(xxl) {
+	.carousel {
+		.carousel-item {
+			img {
+				&.cornelia {
+					object-position: center 10%;
+				}
 
+				&.cup {
+					object-position: 55% 42%;
+				}
+
+				&.jimmy {
+					object-position: 60% 20%;
+				}
+
+				&.lamp {
+					object-position: 55% 25%;
+				}
+
+				&.louise {
+					object-position: left 40%;
+				}
+
+				&.marlene {
+					object-position: 60% 25%;
+				}
+
+				&.micaela {
+					object-position: 55% 25%;
+				}
+			}
+		}
+	}
 }
