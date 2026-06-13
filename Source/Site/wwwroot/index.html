@@ -15,13 +15,15 @@
 							<use xlink:href="style/sprites/sprite.svg#logo" />
 						</svg>
 					</a>
-					<button aria-controls="navigation" aria-expanded="false" aria-label="Växla navigering" class="navbar-toggler" data-bs-target="#navigation" data-bs-toggle="collapse" type="button">
+					<button aria-controls="navigation" aria-expanded="false" aria-label="Växla navigering" class="navbar-toggler" ___data-bs-target="#navigation" ___data-bs-toggle="collapse" id="navigation-toggler" title="Öppna/stäng meny" type="button">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navigation">
 						<ul class="nav">
-							<button aria-label="Stäng meny" class="close" type="button">
-								✕
+							<button aria-label="Stäng meny" class="close" id="navigation-closer" title="Stäng meny" type="button">
+								<svg role="presentation">
+									<use xlink:href="style/sprites/sprite.svg#x-circle-fill" />
+								</svg>
 							</button>
 							<li class="nav-item">
 								<a class="nav-link" href="om-mig.html" title="Min dröm">Om mig</a>

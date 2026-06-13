@@ -224,12 +224,6 @@ header {
 			color: variables.$black;
 			height: 2rem;
 			width: 2rem;
-
-			&.facebook {
-				height: 2.6rem;
-				margin-top: -0.4rem;
-				width: 2.6rem;
-			}
 		}
 	}
 }
@@ -237,7 +231,18 @@ header {
 .navbar-collapse {
 	ul.nav {
 		.close {
+			background-color: transparent;
+			border-width: 0;
 			display: none;
+			height: 2rem;
+			margin-left: auto;
+			padding: 0;
+			width: 2rem;
+
+			svg {
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 
@@ -274,7 +279,7 @@ header {
 	background-color: variables.$primary-lighter;
 	color: variables.$black;
 	margin-left: auto;
-	margin-right: 0.8rem;
+	margin-right: 0.6rem;
 }
 
 .navbar-toggler-icon {
