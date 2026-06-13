@@ -2,62 +2,44 @@
 @use "Parts/Fonts";
 @use "bootstrap/scss/bootstrap" as *;
 
-:root {
+/*:root {
 	--header-height: 5.25rem;
-	--heading-font-size: 1.8rem;
-}
+}*/
 
 body {
 	color: variables.$black;
 	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
-	margin-top: var(--header-height);
+	//////////////////////////////////////margin-top: var(--header-height);
 
 	&.home {
 		main {
-			margin-bottom: 1rem;
 			margin-top: 50rem;
 
-			> h1 {
-				background-color: variables.$secondary;
-				color: variables.$white;
-				font-size: var(--heading-font-size);
-				left: 0;
-				padding-top: 0.6rem;
-				position: fixed;
-				right: 0;
-				text-align: center;
-				top: var(--header-height);
-				top: calc(var(--header-height) - 0.2rem);
-				z-index: 1020;
-			}
-
 			.frame {
-				--frame-background: #{variables.$secondary-lightest};
-				--frame-border: #{variables.$primary};
-
 				p {
-					//color: variables.$secondary-darkest;
-					font-size: 1.6rem;
+					color: variables.$white;
+					font-size: 2rem;
 					margin-bottom: 0;
-				}
-
-				svg {
-					color: variables.$secondary;
-					height: 15rem;
-					width: 26rem;
 				}
 			}
 
 			.welcome {
-				background-color: variables.$white;
-				border: 10px solid variables.$primary;
-				border-radius: var(--bs-border-radius-xl) !important;
-				margin-top: -4rem;
+				background-color: variables.$primary;
+				margin-top: -5rem;
 				padding: 1rem;
 				padding-top: 4rem;
 
-				p {
-					font-size: 1.5rem;
+				width: 100vw;
+				margin-left: calc(50% - 50vw);
+
+				.container-md {
+					h1 {
+						display: none;
+					}
+
+					p {
+						font-size: 1.5rem;
+					}
 				}
 			}
 		}
@@ -65,10 +47,7 @@ body {
 }
 
 header {
-	background-color: variables.$secondary-lightest;
-	border-color: variables.$primary;
-	border-style: solid;
-	border-width: 10px 0;
+	background-color: variables.$primary;
 	left: 0;
 	position: fixed;
 	right: 0;
@@ -164,7 +143,8 @@ header {
 	height: 100%;
 	left: 0;
 	position: fixed;
-	top: calc(var(--header-height) + var(--heading-font-size));
+	top: 0;
+	/////////////////////////////////////top: var(--header-height);
 	width: 100%;
 	z-index: -1;
 
@@ -182,13 +162,17 @@ header {
 	}
 }
 
+.collapsing {
+	transition: none;
+}
+
 .nav {
 	.nav-item {
 		align-items: center;
 		display: flex;
 
 		&:not(:last-child)::after {
-			color: variables.$secondary-darker;
+			color: variables.$black;
 			content: "|";
 			font-size: 2rem;
 			margin: 0 0.75rem;
@@ -196,7 +180,7 @@ header {
 	}
 
 	.nav-link {
-		color: variables.$secondary-darker;
+		color: variables.$black;
 		font-size: 1.6rem;
 		padding: 0;
 
@@ -205,7 +189,7 @@ header {
 		&:hover,
 		&:link,
 		&:visited {
-			color: variables.$secondary-darker;
+			color: variables.$black;
 		}
 
 		&:hover {
@@ -214,7 +198,7 @@ header {
 
 		&.active,
 		&:active {
-			color: variables.$secondary-darkest;
+			color: variables.$black;
 			font-weight: bold;
 			text-decoration: underline;
 		}
@@ -222,16 +206,79 @@ header {
 }
 
 .navbar {
-	--bs-navbar-toggler-border-color: #{variables.$secondary-darker};
+	--bs-navbar-toggler-border-color: #{variables.$black};
+
+	.social-media {
+		a,
+		a:active,
+		a:focus,
+		a:focus-visible,
+		a:hover,
+		a:link,
+		a:visited,
+		a svg {
+			text-decoration: none !important;
+		}
+
+		svg {
+			color: variables.$black;
+			height: 2rem;
+			width: 2rem;
+
+			&.facebook {
+				height: 2.6rem;
+				margin-top: -0.4rem;
+				width: 2.6rem;
+			}
+		}
+	}
+}
+
+.navbar-collapse {
+	ul.nav {
+		.close {
+			display: none;
+		}
+	}
+
+	&.show {
+		display: contents;
+
+		ul.nav {
+			background-color: variables.$primary-lighter;
+			border-radius: 1rem;
+			display: block;
+			left: 50%;
+			list-style: circle;
+			padding: 1rem;
+			position: fixed;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 15rem;
+			z-index: 1040;
+
+			.close {
+				display: block;
+			}
+
+			.nav-item {
+				&:not(:last-child)::after {
+					content: none;
+				}
+			}
+		}
+	}
 }
 
 .navbar-toggler {
-	background-color: $gray-100;
-	color: variables.$secondary-darker;
+	background-color: variables.$primary-lighter;
+	color: variables.$black;
+	margin-left: auto;
+	margin-right: 0.8rem;
 }
 
 .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23#{str-slice('#{variables.$secondary}', 2)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23#{str-slice('#{variables.$black}', 2)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .text-primary {
@@ -326,20 +373,9 @@ header {
 
 				.frame {
 					p {
-						font-size: 1.3rem;
-					}
-
-					svg {
-						height: 12rem;
-						width: 20.75rem;
+						font-size: 1.6rem;
 					}
 				}
-
-/*				.welcome {
-					p {
-						font-size: 1.2rem;
-					}
-				}*/
 			}
 		}
 	}
