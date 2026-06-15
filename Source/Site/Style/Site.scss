@@ -25,7 +25,7 @@ body {
 	&.home,
 	&.my-dream {
 		main {
-			margin-top: 70vh;
+			margin-top: 50%;
 		}
 	}
 
@@ -631,6 +631,17 @@ header {
 						font-size: 1.2rem;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (max-height: 400px) {
+	body {
+		&.home,
+		&.my-dream {
+			main {
+				margin-top: 40%;
 			}
 		}
 	}
