@@ -7,6 +7,7 @@
 }
 
 body {
+	background-color: variables.$primary;
 	color: variables.$black;
 	font-family: "Shaking two", Arial, "Helvetica Neue", Helvetica, sans-serif;
 
@@ -494,6 +495,16 @@ header {
 	}
 }
 
+@include media-breakpoint-down(md) {
+	body {
+		&.my-dream {
+			main {
+				margin-top: 38rem;
+			}
+		}
+	}
+}
+
 @include media-breakpoint-between(md, lg) {
 	body {
 		&.my-dream {
@@ -635,14 +646,3 @@ header {
 		}
 	}
 }
-
-/*@media (max-height: 400px) {
-	body {
-		&.home,
-		&.my-dream {
-			main {
-				margin-top: 30rem;
-			}
-		}
-	}
-}*/
