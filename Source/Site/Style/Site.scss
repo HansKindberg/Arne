@@ -22,10 +22,15 @@ body {
 		}
 	}
 
+	&.home,
+	&.my-dream {
+		main {
+			margin-top: 70vh;
+		}
+	}
+
 	&.home {
 		main {
-			margin-top: 50rem;
-
 			.frame {
 				p {
 					color: variables.$white;
@@ -47,8 +52,6 @@ body {
 
 	&.my-dream {
 		main {
-			margin-top: 50rem;
-
 			> div {
 				background-color: variables.$primary;
 				margin-left: calc(50% - 50vw);
