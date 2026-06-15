@@ -529,6 +529,16 @@ header {
 	}
 }
 
+@include media-breakpoint-up(lg) {
+	.nav {
+		.nav-item {
+			&.home {
+				display: none;
+			}
+		}
+	}
+}
+
 @include media-breakpoint-between(lg, xl) {
 	body {
 		&.my-dream {
